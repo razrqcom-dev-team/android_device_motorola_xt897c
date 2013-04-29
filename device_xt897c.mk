@@ -37,7 +37,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	telephony.lteOnCdmaDevice=1 \
     ro.config.svlte1x=true \
     persist.radio.eons.enabled=true \
-    ro.cdma.nbpcd=1 \
+    ro.cdma.nbpcd=0 \
     ro.cdma.home.operator.isnan=1 \
     ro.telephony.gsm-routes-us-smsc=1 \
     ro.cdma.otaspnumschema=SELC,1,80,99 \
@@ -51,7 +51,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=10 \
     ro.mot.ignore_csim_appid=true \
     telephony.rilV7NeedCDMALTEPhone=true \
-    ro.cdma.subscribe_on_ruim_ready=true \
     ro.cdma.subscription=1 \
     DEVICE_PROVISIONED=1
 
