@@ -8,8 +8,11 @@ $(call inherit-product, device/motorola/msm8960-common/msm8960.mk)
 # most of the stuff is shared with xt897 (gsm)
 LOCAL_PATH := device/motorola/xt897
 
-# xt897 specific overlay
+# xt897 overlay
 PRODUCT_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
+# xt897c specific overlay (cdma)
+DEVICE_PACKAGE_OVERLAYS += device/motorola/xt897c/overlay
 
 #sqlite3
 PRODUCT_PACKAGES += \
@@ -34,7 +37,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #telephony
 PRODUCT_PROPERTY_OVERRIDES += \
-	telephony.lteOnCdmaDevice=1 \
+    telephony.lteOnCdmaDevice=1 \
     ro.config.svlte1x=true \
     persist.radio.eons.enabled=true \
     ro.cdma.nbpcd=0 \
