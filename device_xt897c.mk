@@ -56,6 +56,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     telephony.rilV7NeedCDMALTEPhone=true \
     ro.cdma.subscription=1 \
     DEVICE_PROVISIONED=1 \
+    persist.sys.report_gprs_as_edge=1 \
     persist.timed.enable=true
 
 # IDC
