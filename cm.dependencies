@@ -1,0 +1,14 @@
+[
+  {
+    "repository": "android_device_motorola_msm8960-common",
+    "target_path": "device/motorola/msm8960-common"
+  },
+  {
+    "repository": "android_device_motorola_xt897",
+    "target_path": "device/motorola/xt897"
+  },
+  {
+    "repository": "android_kernel_motorola_msm8960-common",
+    "target_path": "kernel/motorola/msm8960-common"
+  },
+]
