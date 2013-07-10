@@ -33,10 +33,6 @@ DEVICE_PACKAGE_OVERLAYS += device/motorola/xt897c/overlay
 PRODUCT_PACKAGES += \
     sqlite3
 
-#custom settings
-PRODUCT_PACKAGES += \
-    PhotonQParts
-
 PRODUCT_LOCALES := en_US
 PRODUCT_LOCALES += hdpi
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
