@@ -46,6 +46,10 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.log.aplogd.enable=1 \
 
+# Ubuntu
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/ubuntu-session.d.conf:system/etc/ubuntu-session.d/xt897c.conf
+
 # QCOM Display
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240 \
