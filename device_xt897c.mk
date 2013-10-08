@@ -29,6 +29,10 @@ PRODUCT_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # xt897c specific overlay (cdma)
 DEVICE_PACKAGE_OVERLAYS += device/motorola/xt897c/overlay
 
+# Nfc
+PRODUCT_PACKAGES += \
+    nfc.msm8960
+
 #sqlite3
 PRODUCT_PACKAGES += \
     sqlite3
