@@ -29,6 +29,9 @@
 
 LOCAL_PATH := device/motorola/xt897c
 
+# Use common media profile
+TARGET_USES_MOTOROLA_MSM8960_COMMON_MEDIA_PROFILES := true
+
 # xt897 liblight
 TARGET_USES_MOTOROLA_MSM8960_XT897_LIBLIGHT := true
 
