@@ -29,6 +29,9 @@ PRODUCT_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # xt897c specific overlay (cdma)
 DEVICE_PACKAGE_OVERLAYS += device/motorola/xt897c/overlay
 
+# Use common media profile
+TARGET_USES_MOTOROLA_MSM8960_COMMON_MEDIA_PROFILES := true
+
 # Nfc
 PRODUCT_PACKAGES += \
     nfc.msm8960
