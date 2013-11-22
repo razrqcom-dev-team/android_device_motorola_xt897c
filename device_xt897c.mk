@@ -29,6 +29,15 @@ PRODUCT_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # xt897c specific overlay (cdma)
 DEVICE_PACKAGE_OVERLAYS += device/motorola/xt897c/overlay
 
+#sqlite3
+PRODUCT_PACKAGES += \
+    sqlite3
+
+PRODUCT_LOCALES := en_US
+PRODUCT_LOCALES += hdpi
+PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
+
 # Use common media profile
 TARGET_USES_MOTOROLA_MSM8960_COMMON_MEDIA_PROFILES := true
 
@@ -36,32 +45,19 @@ TARGET_USES_MOTOROLA_MSM8960_COMMON_MEDIA_PROFILES := true
 PRODUCT_PACKAGES += \
     nfc.msm8960
 
-#sqlite3
-PRODUCT_PACKAGES += \
-    sqlite3
-
-#custom settings
-PRODUCT_PACKAGES += \
-    PhotonQParts
-
-PRODUCT_LOCALES := en_US
-PRODUCT_LOCALES += hdpi
-PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
-PRODUCT_AAPT_PREF_CONFIG := hdpi
-
 #misc
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.log.aplogd.enable=1 \
+    persist.log.aplogd.enable=1
 
 # QCOM Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=240 \
+    ro.sf.lcd_density=240
 
 #telephony
 PRODUCT_PROPERTY_OVERRIDES += \
     telephony.lteOnCdmaDevice=1 \
+    ro.config.svdo=true \
     ro.config.svlte1x=true \
-    persist.radio.eons.enabled=true \
     ro.cdma.nbpcd=0 \
     ro.cdma.home.operator.isnan=1 \
     ro.telephony.gsm-routes-us-smsc=1 \
@@ -78,8 +74,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     telephony.rilV7NeedCDMALTEPhone=true \
     ro.cdma.subscription=1 \
     DEVICE_PROVISIONED=1 \
-    persist.sys.report_gprs_as_edge=1 \
-    persist.timed.enable=true
+    persist.sys.report_gprs_as_edge=1
 
 # IDC
 PRODUCT_COPY_FILES += \
@@ -95,8 +90,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keychars/keypad_8960.kcm:system/usr/keychars/keypad_8960.kcm
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/config/gps.conf:system/etc/gps.conf
+# Alternate optional key maps
+PRODUCT_PACKAGES += \
+    AsantiKeypad
 
 $(call inherit-product, device/motorola/qcom-common/modules/nfc/nfc.mk)
 $(call inherit-product, vendor/motorola/xt897/xt897-vendor.mk)
